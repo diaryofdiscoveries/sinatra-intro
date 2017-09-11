@@ -1,9 +1,14 @@
 require 'sinatra'
+set :session_secret, 'super secret'
 
 get '/' do
   'Hello!'
 end
 
 get '/secret' do
-  'This is a secret'
+  'This is a secret, ok'
+end
+
+get '/public' do
+  'AW17'
 end
