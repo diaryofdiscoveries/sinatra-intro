@@ -17,7 +17,13 @@ get '/cat' do
   send_file 'cat.html'
 end
 
-get '/cat-raw-html' do
+get '/random-cat' do
   @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
