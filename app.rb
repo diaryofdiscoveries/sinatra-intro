@@ -18,5 +18,6 @@ get '/cat' do
 end
 
 get '/cat-raw-html' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end
